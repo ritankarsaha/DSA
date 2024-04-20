@@ -23,7 +23,6 @@ int BinarySearch(vector<int> arr, int key)
         }
     }
 
-    
     return -1;
 }
 
@@ -41,10 +40,9 @@ int main()
         v.push_back(num);
     }
 
-    int aa = BinarySearch(v, a);  
-    
-        cout << aa << endl;
+    int aa = BinarySearch(v, a);
 
+    cout << aa << endl;
 
     return 0;
 }
