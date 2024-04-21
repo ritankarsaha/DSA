@@ -18,7 +18,7 @@ public:
             int mid = (low + high) / 2;
             if (nums[mid] > nums[mid + 1] && nums[mid] > nums[mid - 1])
                 return mid;
-            // left portion elimination
+            // left portion elimination.
             if (nums[mid] > nums[mid - 1])
                 low = mid + 1;
             else
