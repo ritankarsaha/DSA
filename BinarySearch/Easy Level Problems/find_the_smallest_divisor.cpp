@@ -7,7 +7,7 @@ int sum(vector<int> &arr, int num)
     {
         sum += ceil((double)arr[i] / (double)num);
     }
-    return sum;
+    return sum
 }
 
 class Solution
