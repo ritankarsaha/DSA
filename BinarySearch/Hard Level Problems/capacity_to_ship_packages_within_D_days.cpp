@@ -17,7 +17,7 @@ int noofdays(vector<int> &arr, int max)
         }
     }
     return days;
-    // to return the no of days needed to load the items.
+    // to return the no of days needed    to load the items.
 }
 
 class Solution
