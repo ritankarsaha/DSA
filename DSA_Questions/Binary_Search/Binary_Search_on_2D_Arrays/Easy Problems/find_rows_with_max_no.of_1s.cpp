@@ -22,7 +22,7 @@ int lowerBound(vector<int> arr, int n, int x)
 
 int rowWithMax1s(vector<vector<int>> &matrix, int n, int m)
 {
-    int count_max = 0;
+    int count_max = 0; // count_max is initialised to 0 for rows consisting of only 0s and no 1s as their elements.
     int index = -1;
     for (int i = 0; i < n; i++)
     {
