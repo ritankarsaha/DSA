@@ -1,5 +1,15 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<string>
+#include<math.h>
+#include<utility>
+#include<stack>
+#include<list>
+#include<map>
 using namespace std;
+
+
 unsigned int countsetbits(unsigned int n)
 {
     unsigned int count = 0;
