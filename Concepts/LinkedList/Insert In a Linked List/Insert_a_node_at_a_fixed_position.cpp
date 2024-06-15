@@ -52,16 +52,24 @@ Node* inserthead(Node* head,int val){
     return temp;
 }
 
-Node* insertbeforevalue(Node* head, int el,int k){
+Node* insertatposition(Node* head, int el,int k){
     if(head == NULL){
-        return NULL;
+        if(k==1)
+        {
+            return new Node(el);
+        }
+        else{
+            return head;
+        }
     }
-    if(head->data == 1){
+    if(k == 1){
         return new Node(el,head);
     }
+    int cnt =0;
     Node* temp = head;
-    while(temp->next!=NULL){
-        if(temp->next->data == k){
+    while(temp!=NULL){
+        cnt++;
+        if(cnt == (k-1)){
             Node* x = new Node(el,temp->next);
             temp->next = x;
             break;
@@ -74,6 +82,6 @@ int main()
 {
    vector<int> arr = {2,3,4,5,6,8,6,45,34,3,54,3,3,54,4,44};
    Node* head =  convertArr2LL(arr);
-   head = insertbeforevalue(head,9,3);
+   head = insertatposition(head,9,4);
    print(head);
 }

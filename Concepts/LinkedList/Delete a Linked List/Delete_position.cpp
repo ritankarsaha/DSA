@@ -19,14 +19,37 @@ class Node{
         data = data1;
         next = next1;
     }
-
     public:
     Node(int data1){
         data = data1;
         next = nullptr;
     }
+  };
 
-};
+Node* removek(Node* head,int k){
+  if(head == NULL)
+  return NULL;
+  if(k == 1){
+    Node* temp = head;
+    head = head->next;
+    free(temp);
+    return head;
+  }
+  int cnt =0 ;
+  Node* temp = head;
+  Node* prev = NULL;
+  while(temp != NULL){
+    cnt++;
+    if(cnt == k){
+        prev->next = prev->next->next;
+        free(temp);
+        break;
+    }
+    prev =  temp;
+    temp = temp->next;
+  }
+  return head;
+}
 
 Node* convertArr2LL(vector<int> &arr){
     Node* head = new Node(arr[0]);
@@ -39,6 +62,7 @@ Node* convertArr2LL(vector<int> &arr){
     }
     return head;
 }
+
 void print(Node* head){
     while(head!=NULL){
         cout << head->data <<" ";
@@ -47,33 +71,11 @@ void print(Node* head){
     }
     cout <<endl;
 }
-Node* inserthead(Node* head,int val){
-    Node* temp = new Node(val,head);
-    return temp;
-}
 
-Node* insertbeforevalue(Node* head, int el,int k){
-    if(head == NULL){
-        return NULL;
-    }
-    if(head->data == 1){
-        return new Node(el,head);
-    }
-    Node* temp = head;
-    while(temp->next!=NULL){
-        if(temp->next->data == k){
-            Node* x = new Node(el,temp->next);
-            temp->next = x;
-            break;
-        }
-        temp = temp->next;
-    }
-    return head;
-}
 int main()
 {
-   vector<int> arr = {2,3,4,5,6,8,6,45,34,3,54,3,3,54,4,44};
-   Node* head =  convertArr2LL(arr);
-   head = insertbeforevalue(head,9,3);
+  vector<int> arr = {6,7,8,9,4,3,2,3,4,5,5,4,2,2,34,4};
+   Node* head = convertArr2LL(arr);
+   head = removek(head,4);
    print(head);
 }
