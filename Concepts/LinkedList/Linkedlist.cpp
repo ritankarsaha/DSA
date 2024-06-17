@@ -9,71 +9,51 @@
 #include<map>
 using namespace std;
 
+
 class Node{
     public:
     int data;
     Node* next;
+    Node* back;
 
     public:
-    Node(int data1, Node* next1){
+    Node(int data1,Node* next1,Node* back1){
         data = data1;
         next = next1;
+        back = back1;
     }
-
     public:
     Node(int data1){
         data = data1;
         next = nullptr;
+        back = nullptr;
     }
-
 };
 
-Node* convertArr2LL(vector<int> &arr){
+Node* convertarr2dll(vector<int> &arr){
     Node* head = new Node(arr[0]);
     Node* mover = head;
     for(int i=1;i<arr.size();i++){
-        Node* temp = new Node(arr[i]); 
+        Node* temp = new Node(arr[i],nullptr,mover);
         mover->next = temp;
         mover = temp;
-
     }
     return head;
 }
-void print(Node* head){
-    while(head!=NULL){
-        cout << head->data <<" ";
+Node* print(Node* head){
+    while(head !=NULL){
+        cout << head->data << " ";
         head = head->next;
-        
-    }
-    cout <<endl;
-}
-Node* inserthead(Node* head,int val){
-    Node* temp = new Node(val,head);
-    return temp;
-}
-
-Node* insertbeforevalue(Node* head, int el,int k){
-    if(head == NULL){
-        return NULL;
-    }
-    if(head->data == 1){
-        return new Node(el,head);
-    }
-    Node* temp = head;
-    while(temp->next!=NULL){
-        if(temp->next->data == k){
-            Node* x = new Node(el,temp->next);
-            temp->next = x;
-            break;
-        }
-        temp = temp->next;
+ 
     }
     return head;
+
 }
 int main()
 {
-   vector<int> arr = {2,3,4,5,6,8,6,45,34,3,54,3,3,54,4,44};
-   Node* head =  convertArr2LL(arr);
-   head = insertbeforevalue(head,9,3);
+   vector<int> arr ={2,34,4,5,6,7,7,8,76,54,4,3,2,43};
+   Node* head = convertarr2dll(arr);
    print(head);
+
+
 }
