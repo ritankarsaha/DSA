@@ -78,5 +78,4 @@ int main()
    Node* head = convertarr2dll(arr);
    head = reverseddll(head);
    print(head);
-   cout <<endl;
 }
