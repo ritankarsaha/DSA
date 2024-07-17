@@ -27,6 +27,7 @@ The repository is organized by topics, with each topic having its own directory.
 
 Here is an example structure:
 
+```
 ├── .vscode
 ├── Concepts
 │ ├── Binary_Trees
@@ -43,7 +44,7 @@ Here is an example structure:
 │ └── Sliding_Window_and_Two_Pointer_Questions
 ├── .gitignore
 └── README.md
-
+```
 
 ## How to Use
 
