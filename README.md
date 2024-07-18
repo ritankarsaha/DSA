@@ -51,7 +51,7 @@ Here is an example structure:
 1. **Clone the Repository**: Start by cloning this repository to your local machine using:
 
     ```bash
-    git clone https://github.com/your-username/dsa-questions-solutions.git
+    git clone https://github.com/ritankarsaha/DSA
     ```
 
 2. **Navigate to the Topic**: Go to the directory of the topic you are interested in.
