@@ -18,6 +18,7 @@ class Solution{
       int left = isSumProperty(root->left);
       int right = isSumProperty(root->right);
       if(!left || !right)
+      
       return 0;
       int sum = 0;
       if(root->left) 
