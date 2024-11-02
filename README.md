@@ -30,17 +30,24 @@ Here is an example structure:
 ```
 ├── .vscode
 ├── Concepts
-│ ├── Binary_Trees
-│ ├── LinkedList
-│ ├── STL
-│ ├── hashing.cpp
+│ ├── Binary_Trees_Concepts
+│ ├── Graphs
+│ ├── LinkedList_Concepts
+│ ├── Queues
+│ ├── Sorting Algorithms
+│ ├── Stack Conversion
+│ ├── Stacks
+│ ├── STL_Concepts
 │ └── recursion.cpp
 ├── DSA_Questions
 │ ├── Arrays_Questions
 │ ├── Binary_Search_Questions
 │ ├── Binary_Trees_Questions
 │ ├── Bitwise_Questions
+│ ├── Graphs
+│ ├── Greedy_Algorithms
 │ ├── LinkedList_Questions
+│ ├── Stacks_and_Queues
 │ └── Sliding_Window_and_Two_Pointer_Questions
 ├── .gitignore
 └── README.md
