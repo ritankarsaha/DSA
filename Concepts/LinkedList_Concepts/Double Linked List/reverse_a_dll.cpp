@@ -14,8 +14,6 @@ The brute method solution is to use the stack data structure, after that while i
 #include<map>
 using namespace std;
 
-
-
 class Node{
     public:
     int data;
