@@ -40,7 +40,7 @@ Node* convertArr2LL(vector<int> &arr){
 int lenghtofll(Node* head){
     int cnt =0;
     Node* temp = head;
-    while(temp){
+    while(temp){  
     cnt++;
     temp = temp->next;
     

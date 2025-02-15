@@ -52,6 +52,7 @@ Node* inserthead(Node* head,int val){
     return temp;
 }
 
+
 Node* insertatposition(Node* head, int el,int k){
     if(head == NULL){
         if(k==1)
